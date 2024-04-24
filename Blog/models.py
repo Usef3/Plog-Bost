@@ -3,6 +3,7 @@ from PIL import Image  # بتهندل  الصورة
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.urls import reverse
 
 
 def validate_image_dimensions(image):
@@ -65,4 +66,30 @@ class Post(models.Model):
         indexes = models.Index(fields=['-publish'])  # تهندل الداتا ف قواعد البيانات
     def __str__(self):
         return self.title
-    
+
+    def get_absolute_url(self):
+        return reverse("blog_post",args=
+                       [self.publish.year,
+                   self.publish.month,
+                     self.publish.day,
+                       self.slug]
+        )
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=False)
+
+
+class Meta:
+    ordering = ["-created_at"]
+
+    indexes = [models.Index(fields=["-created_at"])]
+
+    def __str__(self):
+        return f"Comment by {self.name} on post {self.post}"
