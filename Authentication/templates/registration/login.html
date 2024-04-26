@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base3.html" %}
 {% block title %} login{% endblock %}
 {% block content %} <h1> Login Page </h1>
 
@@ -11,12 +11,14 @@
 {% else %}
         <p>
             Please enter your username and password.
+            
 {% endif %}
+
  <div class="login-form">
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}">
+            <input type="hidden" name="next" value={% url "blog_home" %}>
             <p><input type="submit" value="Login"></p>
         </form>
        

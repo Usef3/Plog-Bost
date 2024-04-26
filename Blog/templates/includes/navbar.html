@@ -1,41 +1,111 @@
 {% load static %}
 <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-      <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto py-4 py-lg-0">
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'blog_home' %}"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about_home' %}"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-             
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contact_home' %}"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+  <div class="container px-4 px-lg-5">
+     <a class="navbar-brand" href="{% url 'blog_home' %}">Hello  {{ request.user.first_name|default:request.user.username }}
+      
+     </a>
+    
+     <form action="{% url 'password_change' %}" method="post" style="display: inline;">
+  {% csrf_token %}
+  <button
+    type="submit"
+    class="nav-link px-lg-3 py-3 py-lg-4"
+    style="
+      background: none;
+      border: none;
+      color:rgb(145, 224, 125);
+      font-weight: bold;
+      font-size: 0.8em;
+      font-family: 'Arial', sans-serif;
+      cursor: pointer;  /* تغيير المؤشر للإشارة إلى قابلية النقر */
+    "
+  >
+    <i class="fa fa-key" aria-hidden="true"></i>  <!-- أيقونة Font Awesome لتسجيل الخروج -->
+    password_change 
+  </button>
+</form>
+<form action="{% url 'edit' %}" method="get" style="display: inline;">
+  <!-- يمكن استخدام طلب GET لتعديل الملف الشخصي -->
+  <button
+    type="submit"
+    class="nav-link px-lg-3 py-3 py-lg-4"
+    style="
+      background: none;
+      border: none;
+      color: rgb(94, 243, 236);  /* لون مختلف لتمييزه */
+      font-weight: bold;
+      font-size: 0.8em;
+      font-family: 'Arial', sans-serif;
+      cursor: pointer;
+    "
+  >
+    <i class="fas fa-user-edit"></i>  <!-- أيقونة Font Awesome -->
+    Edit Profile  <!-- نص الزر -->
+  </button>
+</form>
+ <form action="{% url 'logout' %}" method="post" style="display: inline;">
+  {% csrf_token %}
+  <button
+    type="submit"
+    class="nav-link px-lg-3 py-3 py-lg-4"
+    style="
+      background: none;
+      border: none;
+      color:red;
+      font-weight: bold;
+      font-size: 0.8em;
+      font-family: 'Arial', sans-serif;
+      cursor: pointer;  /* تغيير المؤشر للإشارة إلى قابلية النقر */
+    "
+  >
+    <i class="fas fa-sign-out-alt"></i>  <!-- أيقونة Font Awesome لتسجيل الخروج -->
+    Logout ⁉️
+  </button>
+</form>
+ 
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+
+    
+   <br>
+    
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto py-4 py-lg-0">
+        <li class="nav-item">
+          <a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'blog_home' %}"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about_home' %}"
+            >About</a
+          >
+        </li>
+        <li class="nav-item"></li>
+        <li class="nav-item">
+          <a
+            class="nav-link px-lg-3 py-3 py-lg-4"
+            href="{% url 'contact_home' %}"
+            >Contact</a
+          >
+        </li>
+        
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

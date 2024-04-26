@@ -29,6 +29,7 @@ class PostAdmin(admin.ModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = [
+        "post",
         "name",
         "email",
         "created_at",

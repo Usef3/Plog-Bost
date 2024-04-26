@@ -9,18 +9,10 @@
 </head>
 <body>
     <div id="header">
-         <span class="logo">Authentication</span>
+         <span class="logo">Authentication for Blog Post</span>
          {% if request.user.is_authenticated %}
             <ul class='menu'>
-                <li {% if section == 'dashboard' %} class="selected" {% endif %}>
-                    <a href="{% url 'dashboard' %}">My Dashboard</a>
-                </li>
-                <li {% if section == 'images' %} class="selected" {% endif %}>
-                    <a href="#">images</a>
-                </li>
-                <li {% if section == 'people' %} class="selected" {% endif %}>
-                    <a href="#">people</a>
-                </li>
+                
 
 
 
