@@ -10,28 +10,13 @@
 <body>
     <div id="header">
          <span class="logo">Authentication for Blog Post</span>
-         {% if request.user.is_authenticated %}
-            <ul class='menu'>
-                
-
-
-
-         </ul>
+        
          
-         {% endif %}
+      
 
-
-         <span class="user">
-            {% if request.user.is_authenticated %}
-                Hello {{ request.user.first_name|default:request.user.username }}
-                <form action="{% url 'logout' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-</form>
-
-            {% else %}
-                <a href="{% url 'login' %}">Login</a>
-            {% endif %}
+          
+      
+           
         </span>
         </div>
         {% if messages %}

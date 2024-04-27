@@ -10795,4 +10795,35 @@ header.masthead .post-heading .meta a {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+    /* custom.css */
+    .comments-list .card {
+      border: 1px solid #e0e0e0;
+      /* لون الحدود */
+      border-radius: 10px;
+      /* زوايا مستديرة */
+      background: #f9f9f9;
+      /* لون الخلفية */
+    }
+  
+    .comments-list .card-header {
+      background: #f0f0f0;
+      /* خلفية مختلفة */
+      color: #333;
+      /* لون النص */
+    }
+  
+    .comments-list .card-body {
+      color: #555;
+      /* لون النص */
+    }
+  
+    .comments-list .card-body .card-text {
+      font-size: 1em;
+      /* حجم النص */
+    }
+  
+    .comments-list .card-header .text-muted {
+      color: #888;
+      /* لون النص المحايد */
+    }
 }
