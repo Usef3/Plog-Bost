@@ -1,5 +1,5 @@
 # Plog-Bost
-
+ 
 <h1><u>To install the project follow these steps:</u></h1>
 
 <u>1-pip install django</u>
