@@ -3,9 +3,13 @@
 {% block title %} Welcome {% endblock title %}
 
 {% block content %}
-    <h1>Welcome {{ new_user.first_name }}</h1>
-    <p>
+<div class="welcome-container" style="max-width: 600px; margin: 50px auto; padding: 30px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
+    <h1 style="color: #333; font-size: 2em; font-weight: bold;">Welcome, {{ new_user.first_name }}!</h1>
+    <p style="color: #555; font-size: 1.2em; margin-top: 20px;">
         Your account has been created successfully.
-        Now you can <a href="{% url 'login' %}">login</a>
     </p>
-{% endblock content%}
+    <p style="color: #555; font-size: 1em;">
+        You can now <a href="{% url 'login' %}" style="color: #007bff; text-decoration: none;">login</a> and start using our services.
+    </p>
+</div>
+{% endblock content %}

@@ -13,8 +13,13 @@
             Please enter your username and password.
             
 {% endif %}
-
- <div class="login-form">
+  
+        
+ <div class="page-container">
+        <div class="background"></div>
+        <div class="login-form" >
+            
+            <h2>login</h2>
         <form action="{% url 'login' %}" method="post">
             {{ form.as_p }}
             {% csrf_token %}
@@ -28,4 +33,5 @@
 
         
 </div>
+
 {% endblock %}

@@ -9,14 +9,20 @@
 </head>
 <body>
     <div id="header">
-         <span class="logo">Authentication for Blog Post</span>
-        
+         <span class="logo">Authentication</span>
          
-      
 
-          
-      
-           
+         <span class="user">
+            {% if request.user.is_authenticated %}
+                Hello {{ request.user.first_name|default:request.user.username }}
+                <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
         </span>
         </div>
         {% if messages %}
@@ -26,7 +32,7 @@
                     {{message|safe}}
 
            </li>
-           <a href="#" class="close">X</a>
+           <a href={% url "blog_home" %} class="close">X</a>
                  
         {% endfor %}
         </ul>

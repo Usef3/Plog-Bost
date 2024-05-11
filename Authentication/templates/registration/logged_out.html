@@ -3,10 +3,19 @@
 {% block title %} Logged Out {% endblock %}
 
 {% block content %}
-
-    <h1>Logged Out</h1>
-    <p>
-        You have been successfully logged out.
-        You can <a href="{% url 'login' %}">Login again</a>
+<div class="logout-container" style="max-width: 600px; margin: 50px auto; text-align: center; padding: 30px; background: #f7f7f7; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #007bff; font-size: 2em; font-weight: bold;">Logged Out</h1>
+    <p style="color: #555; font-size: 1.2em; margin-top: 10px;">
+        You have successfully logged out.
     </p>
+    <p style="color: #555; font-size: 1.2em; margin-top: 10px;">
+        You can
+        <a href="{% url 'login' %}" style="color: #007bff; text-decoration: none; font-weight: bold;">
+            Login again
+        </a>
+    </p>
+    <div style="margin-top: 30px;">
+        <i class="fas fa-sign-out-alt" style="font-size: 50px; color: #007bff;"></i>
+    </div>
+</div>
 {% endblock %}

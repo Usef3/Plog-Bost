@@ -364,3 +364,118 @@ a.follow {
         font-style: italic;
         color: #ccc;
     }
+
+.page-container {
+    height: 100vh;
+    /* تغطية الارتفاع الكامل */
+    display: flex;
+    /* استخدام Flexbox لتوسيط المحتوى */
+    justify-content: center;
+    /* توسيط أفقي */
+    align-items: center;
+    /* توسيط رأسي */
+    position: relative;
+    /* للسماح بوجود طبقات */
+}
+
+/* الخلفية الضبابية */
+.background {
+    position: absolute;
+    /* تحديد موضع الخلفية */
+    top: 0;
+    /* من الأعلى */
+    left: 0;
+    /* من اليسار */
+    width: 100%;
+    /* تغطية العرض الكامل */
+    height: 100%;
+    /* تغطية الارتفاع الكامل */
+    background-image: url("/Blog/static/assets/img/about-bg.jpg");
+    /* رابط مباشر للصورة من Unsplash */
+    background-size: cover;
+    /* تغطية كاملة */
+    background-position: center;
+    /* توسيط الصورة */
+    filter: blur(10px);
+    /* تطبيق التأثير الضبابي */
+    z-index: -1;
+    /* التأكد من أن الخلفية تبقى في الخلفية */
+}
+
+/* تنسيق النموذج */
+.login-form {
+    max-width: 400px;
+    /* العرض الأقصى */
+    padding: 30px;
+    /* الحواف الداخلية */
+background: #aaa;
+    /* خلفية شفافة */
+    border-radius: 10px;
+    /* زوايا مستديرة */
+    box-shadow: 0 8px 15px #421b9b;
+    /* ظل خفيف */
+    text-align: center;
+    /* محاذاة النص */
+}
+
+.login-form h2 {
+    color: #333;
+    /* لون النص */
+    font-size: 1.5em;
+    /* حجم الخط */
+    margin-bottom: 20px;
+    /* تباعد أسفل العنوان */
+}
+
+/* تنسيق حقول الإدخال */
+.login-form input {
+    width: 70%;
+    /* عرض كامل */
+    padding: 10px;
+    /* حواف داخلية */
+    border-radius: 5px;
+    /* زوايا مستديرة */
+    border: 1px solid #f04b4b;
+    /* حدود */
+    margin-bottom: 20px;
+    /* تباعد بين الحقول */
+}
+
+/* تنسيق الزر */
+.login-form .btn {
+    background: #007bff;
+    /* لون الزر */
+    color: white;
+    /* لون النص */
+    padding: 10px 25px;
+    /* حجم الزر */
+    border-radius: 5px;
+    /* زوايا مستديرة */
+    cursor: pointer;
+    /* مؤشر اليد */
+    text-transform: uppercase;
+    /* أحرف كبيرة */
+}
+
+.login-form .btn:hover {
+    background: #0056b3;
+    /* تغيير لون الزر عند التحويم */
+}
+
+/* تنسيق الروابط الإضافية */
+.extra-links {
+    margin-top: 30px;
+    /* تباعد بين النموذج والروابط */
+}
+
+.extra-links a {
+    color: #007bff;
+    /* لون الروابط */
+    text-decoration: none;
+    /* إزالة الخط */
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+    /* إضافة خط عند التحويم */
+}

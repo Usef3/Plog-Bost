@@ -9,7 +9,7 @@ from django.urls import reverse
 def validate_image_dimensions(image):
     min_width = 1000
     min_height = 500
-    img = Image.open(image)  # افتحلي الصورة
+    img = Image.open(image)    
     width, height = img.size
 
     if width < min_width or height < min_height:
@@ -93,3 +93,5 @@ class Meta:
 
     def __str__(self):
         return f"Comment by {self.name} on post {self.post}"
+
+
