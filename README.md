@@ -8,11 +8,7 @@
 
 
 
-<u>1-pip install virtualenv</u>
 
-<u>2-py -m venv venv</u>    
-
-<u>3-venv\scripts\activate</u>
 
 
 
