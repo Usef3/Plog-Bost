@@ -4,6 +4,8 @@
 
 
 
+<u>To install the project follow these steps:</u>
+
 
 
 <u>1-pip install virtualenv</u>
@@ -12,14 +14,14 @@
 
 <u>3-venv\scripts\activate</u>
 
-<u>4-To install the project follow these steps:</u>
 
-<u>5-pip install django</u>
 
-<u>6-pip install Pillow</u> 
+<u>4-pip install django</u>
 
-<u>7-py manage.py makemigrations</u>
+<u>5-pip install Pillow</u> 
 
-<u>8-py manage.py migrate</u>
+<u>6-py manage.py makemigrations</u>
 
-<u>9-py manage.py runserver</u>
+<u>7-py manage.py migrate</u>
+
+<u>8-py manage.py runserver</u>
