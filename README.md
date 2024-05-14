@@ -1,5 +1,7 @@
 # Plog-Bost using Django
- 
+<h1><u>pip install virtualenv</u></h1>
+<h1><u>py -m venv venv</u></h1>     
+<h1><u>venv\scripts\activate</u></h1> 
 <h1><u>To install the project follow these steps:</u></h1>
 
 <u>1-pip install django</u>
