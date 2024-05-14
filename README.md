@@ -12,12 +12,12 @@
 
 
 
-<u>4-pip install django</u>
+<u>1-pip install django</u>
 
-<u>5-pip install Pillow</u> 
+<u>2-pip install Pillow</u> 
 
-<u>6-py manage.py makemigrations</u>
+<u>3-py manage.py makemigrations</u>
 
-<u>7-py manage.py migrate</u>
+<u>4-py manage.py migrate</u>
 
-<u>8-py manage.py runserver</u>
+<u>5-py manage.py runserver</u>
