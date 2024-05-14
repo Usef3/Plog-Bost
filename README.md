@@ -4,7 +4,7 @@
 
 <u>1-pip install django</u>
 
-<u>2-pip install Pillow</u>
+<u>2-pip install Pillow</u> 
 
 <u>3-py manage.py makemigrations</u>
 
