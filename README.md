@@ -1,7 +1,7 @@
 # Plog-Bost using Django
 
   
-
+ 
 
 
 <u>To install the project follow these steps:</u>
